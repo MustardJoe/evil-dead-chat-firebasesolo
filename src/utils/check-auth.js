@@ -1,7 +1,7 @@
-// import { auth } from '../services/firebase.js';
+import { auth } from '../services/firebase.js';
 
-// auth.onAuthStateChanged(user => {
-//     if(!user) {
-//         window.location = './auth.html';
-//     }
-// });
+auth.onAuthStateChanged(user => {
+    if(!user) {
+        window.location = './auth.html';
+    }
+});
