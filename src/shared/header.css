@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light|ZCOOL+KuaiLe&display=swap');
+
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: black;
+    padding: 6px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    /* font-family: 'Shadows Into Light', cursive; */
 }
 
 h1 {

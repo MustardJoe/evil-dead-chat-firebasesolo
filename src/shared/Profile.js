@@ -22,7 +22,7 @@ class Profile extends Component {
             return `<div></div>`;
         }
 
-        const avatar = user.photoURL || './assets/default-avatar.png';
+        const avatar = user.photoURL || './assets/default-avatar.jpg';
 
         return /*html*/`
             <div class="profile">
