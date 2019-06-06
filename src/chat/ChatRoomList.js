@@ -1,6 +1,6 @@
 import Component from '../Component.js';
 import ChatRoomItem from '../shared/ChatRoomItem.js';
-import { chatRoomsRef } from '../services/firebase.js';
+// import { chatRoomsRef } from '../services/firebase.js';
 
 class ChatRoomList extends Component {
     render() {
