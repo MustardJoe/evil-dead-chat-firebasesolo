@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light|ZCOOL+KuaiLe&display=swap');
 
 header {
+    
     display: flex;
-    align-items: center;
     justify-content: space-between;
     background-color: black;
     padding: 6px;
@@ -12,15 +12,16 @@ header {
 }
 
 h1 {
-    margin-left: 150px;
-    color: crimson;
+    margin-left: 50px;
+    color: firebrick;
 }
 
 .profile {
+    margin-left: 2em;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: crimson;
+    color: firebrick;
 }
 
 .profile img {
