@@ -11,11 +11,13 @@ class ChatApp extends Component {
             event.preventDefault();
             // this generates a random key and assigns to returned ref
             const chatRoomRef = chatRoomsRef.push();
+            console.log(chatRoomRef);
 
             chatRoomRef.set({
                 key: chatRoomRef.key,
                 owner: auth.currentUser.uid,
-                name: input.value 
+                chat_msg: input.value, 
+                // name: auth.currentUser.username
             }).then(() => {
                 form.reset();
             });
@@ -25,7 +27,7 @@ class ChatApp extends Component {
 
 
 
-        return form;
+        return dom;
     }
 
     renderTemplate() {
