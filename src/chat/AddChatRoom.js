@@ -1,5 +1,5 @@
 import Component from '../Component.js';
-import { auth, chatRoomsRef } from '../services/firebase.js';
+import { auth, chatRoomsRef, chatMsgsByRoomRef } from '../services/firebase.js';
 
 class AddChatRoom extends Component {
     render() {
@@ -10,6 +10,10 @@ class AddChatRoom extends Component {
             event.preventDefault();
             // this generates a random key and assigns to returned ref
             const chatRoomRef = chatRoomsRef.push();
+
+            chatMsgsByRoomRef.set({
+                
+            });
 
             chatRoomRef.set({
                 key: chatRoomRef.key,

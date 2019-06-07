@@ -21,7 +21,7 @@ class ChatRoomItem extends Component {
         
         return /*html*/`
             <li class="chatlist-item">
-                <div><a href="./chat.html">Here is a chat room ${chatRoom.name}</a></div>
+                <div><a href="./chat.html?key=${chatRoom.key}">Here is a chat room ${chatRoom.name}</a></div>
                 <button>Delete Room</button>
             </li>
 

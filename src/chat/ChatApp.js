@@ -1,5 +1,6 @@
 import Component from '../Component.js';
-import { auth, chatRoomsRef } from '../services/firebase.js';
+import Header from '../shared/Header.js';
+import { auth, chatRoomsRef, testtdata } from '../services/firebase.js';
 
 class ChatApp extends Component {
     render() { //render method from addChatRoom, will need to modify
@@ -7,11 +8,21 @@ class ChatApp extends Component {
         const input = dom.querySelector('input');
         const form = dom.querySelector('form');
 
+        const header = new Header();
+        dom.prepend(header.render());
+
         dom.addEventListener('submit', event => {
             event.preventDefault();
             // this generates a random key and assigns to returned ref
             const chatRoomRef = chatRoomsRef.push();
             console.log(chatRoomRef);
+
+            testtdata.on('value', snapshot => {
+                // console.log(snapshot.val()),
+                const testValue = snapshot.val();
+                console.log(testValue);
+                return testValue;
+            });
 
             chatRoomRef.set({
                 key: chatRoomRef.key,
@@ -33,6 +44,7 @@ class ChatApp extends Component {
     renderTemplate() {
         return /*html*/`
             <div class="chat-room">
+                <a href="./">Home</a>
                 <div class="chat-content">
                     
                 </div>
