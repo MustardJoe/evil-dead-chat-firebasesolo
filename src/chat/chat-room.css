@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap');
+
 .chat-room {
     width: 500px;
-    height: 500px;
+    height: 600px;
     background-color: thistle;
 }
 
@@ -17,4 +19,13 @@
 
 .text-input {
     width: 400px;
+}
+
+.home-bar {
+    margin: 5px;
+}
+
+.home-link {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 1.4em;
 }

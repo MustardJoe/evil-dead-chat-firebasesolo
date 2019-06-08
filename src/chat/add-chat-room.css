@@ -1,6 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light|ZCOOL+KuaiLe&display=swap');
+
 .add-chat-room {
     display: flex;
     justify-content: center;
     margin: 1em;
 
+}
+
+.chat-room-list {
+    list-style: none;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.chatlist-item {
+    margin-top: 20px;
+    border: firebrick solid 5px;
+    background-color: thistle;
+    border-radius: 8px;
+}
+
+.join-us {
+    font-size: 0.6em;
 }
