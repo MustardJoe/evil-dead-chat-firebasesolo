@@ -1,13 +1,16 @@
 import Component from '../Component.js';
 import Header from '../shared/Header.js';
 import QUERY from '../QUERY.js';
-import { auth, chatRoomsRef, chatMsgsByRoomRef } from '../services/firebase.js';
+import MessageList from './MessageList.js';
+import MessageInput from './MessageInput.js';
+
+
+import { chatRoomsRef, chatMsgsByRoomRef } from '../services/firebase.js';
 
 class ChatApp extends Component {
-    render() { //render method from addChatRoom, will need to modify
+    render() { 
         const dom = this.renderDOM();
-        const input = dom.querySelector('input');
-        const form = dom.querySelector('form');
+        const main = dom.querySelector('main');
 
         const header = new Header();
         dom.prepend(header.render());
@@ -15,34 +18,21 @@ class ChatApp extends Component {
         const searchParams = QUERY.parse(window.location.search.slice(1));
         const chatRoomRef = chatRoomsRef.child(searchParams.key);
         const roomMessagesRef = chatMsgsByRoomRef.child(searchParams.key);
+      
+
         
-
-        // dom.addEventListener('submit', event => {  //probably don't need any of this crap
-        //     event.preventDefault();
-        //     // this generates a random key and assigns to returned ref
-        //     const chatRoomRef = chatRoomsRef.push();
-        //     console.log(chatRoomRef);
-
-        //     testtdata.on('value', snapshot => {
-        //         // console.log(snapshot.val()),
-        //         const testValue = snapshot.val();
-        //         console.log(testValue);
-        //         return testValue;
-        //     });
-        // });
-
         roomMessagesRef 
             .on('value', snapshot => {
                 const value = snapshot.val();
                 const messages = value ? Object.values(value) : [];
                 messageList.update({ messages: messages });
             });
-            
+        
         chatRoomRef
             .on('value', snapshot => {
                 const value = snapshot.val();
                 header.update({ title: value.name });
-
+                
             });
         
         const messageInput = new MessageInput({ 
@@ -50,16 +40,19 @@ class ChatApp extends Component {
             key: searchParams.key      
         });
         
-        chatRoomRef.set({
-            key: chatRoomRef.key,
-            owner: auth.currentUser.uid,
-            chat_msg: input.value, 
-            // name: auth.currentUser.username
-        }).then(() => {
-            form.reset();
-        });
-
-
+        // chatRoomRef.set({      //this code breaks app, from when input form was located in this comp
+        //     key: chatRoomRef.key,
+        //     owner: auth.currentUser.uid,
+        //     chat_msg: input.value, 
+        //     // name: auth.currentUser.username
+        // }).then(() => {
+        //     form.reset();
+        // });
+        
+        main.appendChild(messageInput.render());
+        
+        const messageList = new MessageList({ messages: [] });
+        main.appendChild(messageList.render());
 
         return dom;
     }
@@ -67,16 +60,9 @@ class ChatApp extends Component {
     renderTemplate() {
         return /*html*/`
             <div class="chat-room">
-                <a href="./">Home</a>
-                <div class="chat-content">
-                    
-                </div>
-                <div class="chat-input">
-                    <form>
-                        <input class="text-input" type="text">
-                        <button>Send</button>
-                    </form>
-                </div>
+                <main class="chat-content">
+                    <a href="./">Home</a>
+                </main>
             </div>
     `;
     }
