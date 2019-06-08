@@ -16,7 +16,8 @@ class ChatRoomList extends Component {
     }
     renderTemplate() {
         return /*html*/`
-        <ul>
+        <ul class="chat-room-list">
+        <h2>...Join Us... <span class="join-us">in a chat room...</span></h2>
         </ul>    
     `;
     }
