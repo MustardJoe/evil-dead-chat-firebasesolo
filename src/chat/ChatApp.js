@@ -32,6 +32,8 @@ class ChatApp extends Component {
             .on('value', snapshot => {
                 const value = snapshot.val();
                 header.update({ title: value.name });
+
+                console.log(value);
                 
             });
         
@@ -54,15 +56,17 @@ class ChatApp extends Component {
         const messageList = new MessageList({ messages: [] });
         main.appendChild(messageList.render());
 
+
         return dom;
     }
 
     renderTemplate() {
         return /*html*/`
             <div class="chat-room">
-                <main class="chat-content">
-                    <a href="./">Home</a>
-                </main>
+                <div class="home-bar">
+                    <a class="home-link" href="./">Home</a>
+                </div>
+                <main class="chat-content"></main>
             </div>
     `;
     }
