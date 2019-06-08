@@ -29,3 +29,7 @@
     font-family: 'ZCOOL KuaiLe', cursive;
     font-size: 1.4em;
 }
+
+main {
+    overflow: auto;
+}
