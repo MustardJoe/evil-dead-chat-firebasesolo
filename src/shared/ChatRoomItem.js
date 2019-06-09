@@ -16,9 +16,7 @@ class ChatRoomItem extends Component {
 
     renderTemplate() {
         const chatRoom = this.props.chatRoom;
-        // const isOwner = auth.currentUser.uid === chatRoom.owner;
-        // const button = isOwner ? '<button>Delete</button>' : ''; stretch goal
-        
+          
         return /*html*/`
             <li class="chatlist-item">
                 <div><a href="./chat.html?key=${chatRoom.key}">${chatRoom.name}</a></div>
