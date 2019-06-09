@@ -1,5 +1,5 @@
 import Component from '../Component.js';
-import MessageItem from './MessageItem.js';;
+import MessageItem from './MessageItem.js';
 
 class MessageList extends Component {
     render() {
