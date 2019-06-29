@@ -1,3 +1,22 @@
 body {
-    background-color: dodgerblue;
+    background-color: lightcoral;
+    color: firebrick;
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    display: block;
+}
+
+.fake-chat-room {
+    background-color: thistle;
+    padding: 20px;
+    margin: 20px;
+    height: 100px;
+    width: 650px;
+}
+
+.garbage {
+    display: block;
 }
