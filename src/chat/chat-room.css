@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap');
+
+.chat-room {
+    width: 500px;
+    height: 600px;
+    background-color: thistle;
+}
+
+.chat-content {
+    height: 400px;
+    width: 480px;
+    margin: 10px;
+    background-color: black;
+}
+
+.chat-input button{
+    width: 50px;
+}
+
+.text-input {
+    width: 400px;
+}
+
+.home-bar {
+    margin: 5px;
+}
+
+.home-link {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 1.4em;
+}
+
+main {
+    overflow: auto;
+}

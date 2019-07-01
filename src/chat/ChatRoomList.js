@@ -1,6 +1,5 @@
 import Component from '../Component.js';
 import ChatRoomItem from '../shared/ChatRoomItem.js';
-import { chatRoomsRef } from '../services/firebase.js';
 
 class ChatRoomList extends Component {
     render() {
@@ -16,7 +15,8 @@ class ChatRoomList extends Component {
     }
     renderTemplate() {
         return /*html*/`
-        <ul>
+        <ul class="chat-room-list">
+        <h2>...Join Us... <span class="join-us">in a chat room...</span></h2>
         </ul>    
     `;
     }

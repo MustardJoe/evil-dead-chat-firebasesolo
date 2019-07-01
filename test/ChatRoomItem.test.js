@@ -2,7 +2,7 @@ import ChatRoomItem from '../src/shared/ChatRoomItem.js';
 
 const test = QUnit.test;
 
-QUnit.module('chat room item test')
+QUnit.module('chat room item test');
 
 test('chat room list render chat room item', assert => {
     //arrange
@@ -22,5 +22,5 @@ test('chat room list render chat room item', assert => {
 
 
     //assert
-    assert.htmlEqual(result, expected)
+    assert.htmlEqual(result, expected);
 });
