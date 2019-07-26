@@ -18,7 +18,8 @@
     margin-top: 20px;
     border: firebrick solid 5px;
     background-color: thistle;
-    border-radius: 8px;
+    background-color: slategray;
+    border-radius: 10px;
 }
 
 .join-us {
