@@ -8,6 +8,8 @@ header {
     background-color: black;
     padding: 6px;
     font-family: 'ZCOOL KuaiLe', cursive;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
     /* font-family: 'Shadows Into Light', cursive; */
 }
 
