@@ -1,6 +1,7 @@
 body {
     background-color: lightcoral;
-    color: firebrick;
+    background-color: firebrick;
+    color: lightcoral;
     display: flex;
     justify-content: center;
 }
